@@ -36,6 +36,10 @@ class TextTransferService: NSObject, TextTransferServiceProtocol, NSXPCListenerD
 
     func textDidChange(_ text: String) {
         NSLog("Text did change: %@", text)
+        if text == "Bye!" {
+            NSLog("???")
+            NotificationManager.shared.scheduleNotification(date: Calendar.current.date(byAdding: .second, value: 2, to: Date()) ?? Date(), title: "App said goodbye!", subtitle: text)
+        }
         DispatchQueue.main.async {
             self.currentText = text
         }

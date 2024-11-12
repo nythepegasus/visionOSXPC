@@ -10,7 +10,8 @@ import Observation
 
 @Observable
 class ContentViewModel {
-
+    static let shared = ContentViewModel()
+    
     private(set) var service: XPCEndpointsServiceProtocol?
     private(set) var textService: TextTransferServiceProtocol?
     private var lastEndpointURL: URL? {
@@ -59,6 +60,10 @@ class ContentViewModel {
     func sendTextUpdate(_ text: String) {
         textService?.textDidChange(text)
     }
+    
+    func disconnect() {
+        textService?.textDidChange("Bye!")
+    }
 
     func setupServiceWithEndpoint(_ url: URL, isInit: Bool = false) {
         if !isInit {
@@ -77,7 +82,7 @@ class ContentViewModel {
                 }
 
                 if let sources,
-                   let source = sources[NSFileProviderServiceName(rawValue: "app.cerio.XPCExchange.endpoints")] {
+                   let source = sources[NSFileProviderServiceName(rawValue: "com.ny.xpcsidestore.CE.handle")] {
                     source.getFileProviderConnection { connection, error in
                         if let error {
                             NSLog("Error: %@", error as NSError)

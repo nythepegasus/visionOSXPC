@@ -8,7 +8,7 @@
 import Foundation
 
 @objc
-protocol XPCEndpointsServiceProtocol {
+protocol XPCEndpointsServiceProtocol: NSObjectProtocol, OS_xpc_object {
 
     func registerEndpoint(name: String, endpoint: NSXPCListenerEndpoint)
     func getEndpoint(name: String, completionHandler: @escaping (NSXPCListenerEndpoint?) -> Void)

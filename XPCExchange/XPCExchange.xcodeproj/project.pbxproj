@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E70FC122CE103F40028AF59 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E70FC112CE103EE0028AF59 /* NotificationManager.swift */; };
 		CCDAC2F72B5C446A0000B11D /* XPCExchangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDAC2F62B5C446A0000B11D /* XPCExchangeApp.swift */; };
 		CCDAC2F92B5C446A0000B11D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDAC2F82B5C446A0000B11D /* ContentView.swift */; };
 		CCDAC2FB2B5C446B0000B11D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCDAC2FA2B5C446B0000B11D /* Assets.xcassets */; };
@@ -51,6 +52,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E70FC102CE100E00028AF59 /* XPCExchange.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XPCExchange.entitlements; sourceTree = "<group>"; };
+		0E70FC112CE103EE0028AF59 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		CCDAC2F32B5C446A0000B11D /* XPCExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPCExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDAC2F62B5C446A0000B11D /* XPCExchangeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCExchangeApp.swift; sourceTree = "<group>"; };
 		CCDAC2F82B5C446A0000B11D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 		CCDAC2F52B5C446A0000B11D /* XPCExchange */ = {
 			isa = PBXGroup;
 			children = (
+				0E70FC112CE103EE0028AF59 /* NotificationManager.swift */,
+				0E70FC102CE100E00028AF59 /* XPCExchange.entitlements */,
 				CCDAC2F62B5C446A0000B11D /* XPCExchangeApp.swift */,
 				CCDAC2F82B5C446A0000B11D /* ContentView.swift */,
 				CCDAC3242B5C4C6D0000B11D /* ContentViewModel.swift */,
@@ -203,7 +208,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					CCDAC2F22B5C446A0000B11D = {
 						CreatedOnToolsVersion = 15.2;
@@ -256,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E70FC122CE103F40028AF59 /* NotificationManager.swift in Sources */,
 				CCDAC2F92B5C446A0000B11D /* ContentView.swift in Sources */,
 				CCDAC3482B5C553F0000B11D /* TextTransferService.swift in Sources */,
 				CCDAC2F72B5C446A0000B11D /* XPCExchangeApp.swift in Sources */,
@@ -412,13 +418,13 @@
 		CCDAC3022B5C446B0000B11D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = XPCExchange/XPCExchange.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"XPCExchange/Preview Content\"";
-				DEVELOPMENT_TEAM = PP4C5TR737;
+				DEVELOPMENT_TEAM = EU74F4WL9R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -431,7 +437,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.cerio.XPCExchange;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ny.xpcsidestore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -445,13 +451,13 @@
 		CCDAC3032B5C446B0000B11D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = XPCExchange/XPCExchange.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"XPCExchange/Preview Content\"";
-				DEVELOPMENT_TEAM = PP4C5TR737;
+				DEVELOPMENT_TEAM = EU74F4WL9R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -464,7 +470,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.cerio.XPCExchange;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ny.xpcsidestore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -481,10 +487,11 @@
 				CODE_SIGN_ENTITLEMENTS = CentralExchange/CentralExchange.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PP4C5TR737;
+				DEVELOPMENT_TEAM = EU74F4WL9R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CentralExchange/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CentralExchange;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -492,7 +499,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.cerio.XPCExchange.CentralExchange;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ny.xpcsidestore.CE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
@@ -510,10 +517,11 @@
 				CODE_SIGN_ENTITLEMENTS = CentralExchange/CentralExchange.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PP4C5TR737;
+				DEVELOPMENT_TEAM = EU74F4WL9R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CentralExchange/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CentralExchange;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -521,7 +529,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.cerio.XPCExchange.CentralExchange;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ny.xpcsidestore.CE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";

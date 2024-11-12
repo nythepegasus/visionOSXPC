@@ -9,10 +9,14 @@ import SwiftUI
 
 @main
 struct XPCExchangeApp: App {
-
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onAppear {
+                    NotificationManager.shared.requestPermission()
+                    NotificationManager.shared.resetBadgeNumber()
+                }
         }
         .defaultSize(width: 240, height: 480)
     }

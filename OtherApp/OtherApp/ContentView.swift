@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-    private let viewModel = ContentViewModel()
+    private let viewModel = ContentViewModel.shared
 
     @State
     private var showFilePicker = false
@@ -45,7 +45,7 @@ struct ContentView: View {
             .navigationTitle("Text Input XPC")
             .listStyle(.insetGrouped)
         }
-        .onChange(of: text) {
+        .onSubmit {
             viewModel.sendTextUpdate(text)
         }
         .fileImporter(

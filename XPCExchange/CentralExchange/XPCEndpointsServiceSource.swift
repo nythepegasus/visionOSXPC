@@ -10,7 +10,7 @@ import FileProvider
 
 class XPCEndpointsServiceSource: NSObject, NSFileProviderServiceSource {
 
-    let serviceName = NSFileProviderServiceName("app.cerio.XPCExchange.endpoints")
+    let serviceName = NSFileProviderServiceName("com.ny.xpcsidestore.CE.handle")
 
     func makeListenerEndpoint() throws -> NSXPCListenerEndpoint {
         return XPCEndpointsServiceListener.shared.endpoint

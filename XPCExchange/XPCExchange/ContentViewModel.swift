@@ -46,6 +46,8 @@ class ContentViewModel {
     }
 
     func setupServiceWithEndpoint(_ url: URL, isInit: Bool = false) {
+        print(lastEndpointURL?.absoluteString ?? "No last endpoint")
+        print(url.absoluteString)
         if !isInit {
             let data = try! NSKeyedArchiver.archivedData(withRootObject: url, requiringSecureCoding: true)
             UserDefaults.standard.setValue(data, forKey: "lastUrl")
@@ -62,7 +64,7 @@ class ContentViewModel {
                 }
 
                 if let sources,
-                   let source = sources[NSFileProviderServiceName(rawValue: "app.cerio.XPCExchange.endpoints")] {
+                   let source = sources[NSFileProviderServiceName(rawValue: "com.ny.xpcsidestore.CE.handle")] {
                     source.getFileProviderConnection { connection, error in
                         if let error {
                             NSLog("Error: %@", error as NSError)
@@ -82,6 +84,7 @@ class ContentViewModel {
                             )
 
                             connection.remoteObjectInterface = interface
+                            
                             connection.interruptionHandler = { [weak self] in
                                 NSLog("Interruption happened")
                                 self?.service = nil
